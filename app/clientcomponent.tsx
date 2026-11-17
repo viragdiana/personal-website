@@ -8,7 +8,7 @@ export default function Names() {
     if(index>0){
         return <p 
                    key={index}
-                   className="heart-pop cursor-pointer text-8xl sm:text-9xl"
+                   className="heart-pop cursor-pointer text-8xl sm:text-9xl [text-shadow:0_0_6px_currentColor]"
                    onClick = {function(){setIndex(index+1)}}
                    >Olivér</p>;
     }

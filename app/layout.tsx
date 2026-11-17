@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { VT323 } from "next/font/google";
+
+const font = VT323({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export const metadata: Metadata = {
   title: "Diana",
@@ -9,7 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={font.className}>{children}</body>
     </html>
   );
 }

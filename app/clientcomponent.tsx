@@ -10,7 +10,7 @@ export default function Names() {
                    key={index}
                    className="heart-pop cursor-pointer text-8xl sm:text-9xl"
                    onClick = {function(){setIndex(index+1)}}
-                   >🔮</p>;
+                   >Olivér</p>;
     }
     return(
         
@@ -21,7 +21,7 @@ export default function Names() {
             }
              }
               >
-        Diana<span className="text-[#ffffff]"> + </span>Cristian
+        Brigi<span className="text-[#ebe6e6]"> + </span>Johnny
       </h1>
     );
 }

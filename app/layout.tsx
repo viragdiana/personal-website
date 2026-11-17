@@ -8,8 +8,8 @@ const font = VT323({
 });
 
 export const metadata: Metadata = {
-  title: "Diana",
-  description: "My personal website",
+  title: "Brigi+Johnny",
+  description: "magic",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

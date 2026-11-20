@@ -15,7 +15,7 @@ export default function Names() {
     return(
         
    
-      <h1 className="text-5xl text-orange-900 sm:text-7xl lg:text-9xl px-4 text-center" 
+      <h1 className="text-5xl sm:text-7xl lg:text-9xl px-4 text-center" 
           onClick= {function() {
             setIndex(index+1)
             }

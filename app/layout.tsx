@@ -1,21 +1,40 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { VT323 } from "next/font/google";
+import { Fraunces, Hedvig_Letters_Serif, Inter } from "next/font/google";
+import localFont from "next/font/local";
 
-const font = VT323({
+const departure = localFont({
+  src: "./fonts/DepartureMono-Regular.woff2",
+  variable: "--font-departure",
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: "300",
+  variable: "--font-fraunces",
+});
+
+const hedvig = Hedvig_Letters_Serif({
   subsets: ["latin"],
   weight: "400",
+  variable: "--font-hedvig",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: "700",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "Brigi+Johnny",
-  description: "magic",
+  title: "Diana",
+  description: "magic_portfolio",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en">
-      <body className={font.className}>{children}</body>
+    <html lang="en" className={`${departure.variable} ${fraunces.variable} ${hedvig.variable} ${inter.variable}`}>
+      <body >{children}</body>
     </html>
   );
 }

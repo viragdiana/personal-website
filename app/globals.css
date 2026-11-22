@@ -25,7 +25,7 @@
 body {
   background: var(--bg);
   color: var(--body);
-  font-family: var(--font--serif)
+  font-family: var(--font-serif)
 }
 
 .label {            /* nav, date tags, contact, ASCII art */
@@ -72,6 +72,23 @@ body {
   background: var(--highlight);
 }
 
+.button {  
+  font-family: var(--font-button);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--tile);
+  background: var(--button);
+  border-radius: 9999px;
+}
+
+.sparkles {         
+  font-family: var(--font-mono);
+  font-size: 19px;
+  line-height: 20px;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--warm);
+}
 @media (max-width: 640px) {
   .project-title { font-size: 24px; }
   .headline {

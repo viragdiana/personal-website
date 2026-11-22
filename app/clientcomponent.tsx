@@ -8,20 +8,20 @@ export default function Names() {
     if(index>0){
         return <p 
                    key={index}
-                   className="heart-pop cursor-pointer text-8xl sm:text-9xl [text-shadow:0_0_6px_currentColor]"
+                   className="headline heart-pop cursor-pointer text-8xl sm:text-9xl [text-shadow:0_0_6px_currentColor]"
                    onClick = {function(){setIndex(index+1)}}
                    >Olivér</p>;
     }
     return(
         
    
-      <h1 className="text-5xl sm:text-7xl lg:text-9xl px-4 text-center" 
+      <h1 className="headline text-5xl sm:text-7xl lg:text-9xl px-4 text-center" 
           onClick= {function() {
             setIndex(index+1)
             }
              }
               >
-        Brigi<span className="text-[#ebe6e6]"> + </span>Johnny
+        Brigi<span className="headline"> + </span>Johnny
       </h1>
     );
 }

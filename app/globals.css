@@ -12,6 +12,7 @@
   --border: #e3e3e3;
   --overlay: #66666621;
   --accent: #0099ff;
+  --highlight: #bccabb;   /* sage green, hover highlight behind links */
 
   --font-mono: var(--font-departure), ui-monospace, monospace;
   --font-display: var(--font-fraunces), Georgia, serif;
@@ -67,6 +68,9 @@ body {
   color: var(--tile-text);
 }
 
+.highlight {
+  background: var(--highlight);
+}
 
 @media (max-width: 640px) {
   .project-title { font-size: 24px; }

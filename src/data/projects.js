@@ -1,12 +1,13 @@
 export const projects = [
   {
-    slug: "diana-cristian",
-    title: "Diana + Cristian",
-    company: "pop",
+    slug: "prep_bot",
+    title: "PrepBot",
+    company: "core labs ubb",
     date: "Fall 2026",
-    status: "internal",       // "internal", "external" or "coming soon"
+    status: "coming soon",       // "internal", "external" or "coming soon"
     href: null,               // external URL, or null
-    image: null,
+    image: "/projects/PrepBot.png",
+    description: "An emotionally-intelligent robot mock interviewer for anyone who needs practice.\nData: eeg, biomentric, computer vision.\n Mobile app. and research paper with new contribution",
   },
   {
     slug: "example-demo",

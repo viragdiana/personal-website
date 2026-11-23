@@ -122,6 +122,18 @@ body {
   flex: 1;                    /* each column takes half the width */
 }
 
+.cursor {
+  position: relative;
+}
+
+.cursor::after {
+  content: "|";
+  position: absolute;
+  left: 2px;
+  top: 0;
+  animation: blink 1s steps(1) infinite;
+}
+
 @media (max-width: 810px) {
   .project-title { font-size: 24px; }
   .headline {
@@ -143,6 +155,10 @@ body {
     gap: 12px; 
   }
 
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
 
 @keyframes pop {

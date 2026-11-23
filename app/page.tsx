@@ -1,9 +1,12 @@
 import Names from "./clientcomponent"
+import Typewriter from "./typewriter";
 export default function Home() {
   return (
     <main className="page">
       <section className="two-col">
-        <h1 className="headline">Creative coder and final year cs student</h1>
+        <h1 className="headline typewriter">
+          <Typewriter text="Creative coder and final year cs student"/>
+        </h1>
         <h2 className="intro">
           I'm studying computer science at <em>Babeş-Bolyai University</em> and doing research there{" "}  
           <em>

@@ -70,6 +70,8 @@ body {
 }
 
 .project-body {     /* body text on project pages */
+  position: relative;
+  z-index: 1;
   font-family: var(--font-serif);
   font-size: 16px;
   line-height: 28px;
@@ -147,16 +149,30 @@ body {
 }
 
 .tile {
+  isolation: isolate;  
   display: grid;
   place-items: center;
+  position: relative;       /* add this to your existing .tile rule */
+  overflow: hidden;
   aspect-ratio: 8 / 5;
   background: var(--tile);
   border-radius: 6px;
   transition: transform 0.2s;
 }
 
+.tile-image {
+  z-index: -1;   
+  object-fit: cover;        /* crop to fill the tile, without stretching */
+  filter: brightness(0.6);  /* darkens it so the white title stays readable */
+}
 .card:hover .tile {
   transform: scale(1.01);
+}
+
+.card-description {
+  text-align: center;
+  margin-top: 8px;
+  white-space: pre-line;
 }
 
 .card:hover .label-link {

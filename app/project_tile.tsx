@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 type Project = {
   slug: string;
@@ -7,6 +8,8 @@ type Project = {
   date: string;
   status: string;
   href: string | null;
+  image: string | null;
+  description?: string;
 };
 
 export default function ProjectTile({ project }: { project: Project }) {
@@ -27,11 +30,24 @@ export default function ProjectTile({ project }: { project: Project }) {
   const card = (
     <>
       <div className="tile">
+        {project.image && (
+          <Image
+            src={project.image}
+            alt=""
+            fill
+            sizes="(max-width: 810px) 100vw, 50vw"
+            loading="eager"
+            className="tile-image"
+          />
+        )}
         <span className="project-title">{project.title}</span>
       </div>
       <p className="label">
         {project.company} [{project.date}] {tag}
       </p>
+      {project.description && (
+       <p className="label card-description">{project.description}</p>
+      )}
     </>
   );
 

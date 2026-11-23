@@ -152,12 +152,14 @@ body {
   isolation: isolate;  
   display: grid;
   place-items: center;
+  text-align: center;
   position: relative;       /* add this to your existing .tile rule */
   overflow: hidden;
   aspect-ratio: 8 / 5;
   background: var(--tile);
   border-radius: 6px;
   transition: transform 0.2s;
+  white-space: pre-line;
 }
 
 .tile-image {

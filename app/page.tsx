@@ -1,5 +1,7 @@
 import Names from "./clientcomponent"
 import Typewriter from "./typewriter";
+import ProjectTile from "./project_tile";
+import { projects } from "../src/data/projects";
 export default function Home() {
   return (
     <main className="page">
@@ -21,6 +23,12 @@ export default function Home() {
             </a>
           </em>
         </h2>
+      </section>
+
+      <section className="projects">
+        {projects.map(function renderProject(project) {
+          return <ProjectTile key={project.slug} project={project} />;
+        })}
       </section>
     </main>
   ); 

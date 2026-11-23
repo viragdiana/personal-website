@@ -40,8 +40,8 @@ body {
 
 .headline {
   font-family: var(--font-mono);
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 36px;
+  line-height: 30px;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: var(--warm);
@@ -89,12 +89,37 @@ body {
   text-transform: uppercase;
   color: var(--warm);
 }
-@media (max-width: 640px) {
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 180px;                 /* space between big sections */
+  padding: 220px 18px 0;      /* top, left/right, bottom */
+}
+
+.two-col {
+  display: flex;
+  gap: 24px;
+}
+
+.two-col > * {
+  flex: 1;                    /* each column takes half the width */
+}
+
+@media (max-width: 810px) {
   .project-title { font-size: 24px; }
   .headline {
     font-size: 28px;
     line-height: 34px;
   }
+  .page {
+    padding-top: 120px;
+  }
+
+  .two-col {
+    flex-direction: column;   /* stack into one column */
+  }
+
 }
 
 @keyframes pop {
